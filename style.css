@@ -1021,7 +1021,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opac
 .orbit-b{width:520px;height:210px;left:-180px;bottom:13%;animation:cadOrbitB 32s linear infinite reverse}
 @keyframes cadOrbitA{to{transform:rotate(335deg)}}
 @keyframes cadOrbitB{to{transform:rotate(-335deg)}}
-.cad-gear{position:absolute;color:rgba(85,200,255,.055);font-family:Arial,sans-serif;line-height:1;font-size:330px;filter:drop-shadow(0 0 25px rgba(85,200,255,.04));user-select:none}
+.cad-gear{position:absolute;color:rgba(85,200,255,.105);font-family:Arial,sans-serif;line-height:1;font-size:330px;filter:drop-shadow(0 0 28px rgba(85,200,255,.10));user-select:none}
 .gear-a{right:-80px;top:28%;animation:cadGearA 70s linear infinite}
 .gear-b{left:-80px;bottom:-5%;font-size:250px;animation:cadGearB 52s linear infinite reverse}
 @keyframes cadGearA{to{transform:rotate(360deg)}}
