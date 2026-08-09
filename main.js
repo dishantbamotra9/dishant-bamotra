@@ -72,3 +72,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// Mechanical blueprint ambient light — visual only.
+(function(){
+  const bg=document.querySelector('.cad-blueprint-bg');
+  if(!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let raf=0;
+  window.addEventListener('pointermove', function(e){
+    if(raf) return;
+    raf=requestAnimationFrame(function(){
+      const x=(e.clientX/window.innerWidth-.5)*18;
+      const y=(e.clientY/window.innerHeight-.5)*12;
+      bg.style.transform=`translate3d(${x}px,${y}px,0)`;
+      raf=0;
+    });
+  }, {passive:true});
+})();

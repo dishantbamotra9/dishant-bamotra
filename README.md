@@ -49,7 +49,8 @@ Hands-on exposure to sheet metal fabrication, laser cutting, press brake forming
 - **Email:** dishantbamotra9@gmail.com
 - **Phone:** +91 72066 25073
 - **LinkedIn:** [linkedin.com/in/dishant-bamotra-592163228](https://linkedin.com/in/dishant-bamotra-592163228)
-- **WhatsApp:** `[7206625073]`
+- **WhatsApp:** `[ Add WhatsApp number ]`
+- **Freelance profile (Upwork / Fiverr):** `[ Add link ]`
 - **GitHub:** `[ Add link ]`
 
 ---
@@ -138,10 +139,10 @@ The contact form in `index.html` (`#contact`) is a static placeholder with `onsu
 
 ## Adding a New Project
 
-1. Duplicate `projects/standalone-mechanical-parts.html` (the simplest template) and rename it, e.g. `projects/your-new-project.html`.
+1. Duplicate `standalone-mechanical-parts.html` (the simplest template) and rename it, e.g. `your-new-project.html`.
 2. Update the `<title>`, meta description, and Open Graph tags at the top of the file.
 3. Update the breadcrumb, eyebrow label ("Project 07 · ..."), heading, summary card, and body content (Requirement, Design Approach, Key Features, Manufacturing Considerations, Assembly Considerations, Material, BOM if relevant).
-4. Add your images to `assets/images/projects/` and reference them with relative paths (`../assets/images/projects/your-image.png`). Keep images under ~1MB where possible; resize to a max width of ~1600px.
+4. Add your images to `/` (project images) and reference them with relative paths (`../assets/images/projects/your-image.png`). Keep images under ~1MB where possible; resize to a max width of ~1600px.
 5. Update the `pd-nav` links at the bottom to point to the correct previous/next project.
 6. Add a new project card to the `#projects` section in `index.html` (copy an existing `.project-card` block) and link it to your new page.
 7. If the project is a strong freelance example, also link it from the relevant service card's "View Details" panel in the `#services` section.
@@ -150,7 +151,7 @@ The contact form in `index.html` (`#contact`) is a static placeholder with `onsu
 
 ## Pre-Publishing Checklist
 
-- [ ] Replace all `[ Add ... ]` placeholders (WhatsApp, GitHub, freelance platform links) in `index.html` and every `projects/*.html` footer/contact section.
+- [ ] Replace all `[ Add ... ]` placeholders (WhatsApp, GitHub, freelance platform links) in `index.html` and every `*.html` footer/contact section.
 - [ ] Connect the contact form to Formspree, Netlify Forms, or another handler (see above).
 - [ ] Confirm email, phone and LinkedIn links are current.
 - [ ] Proofread all project case studies for accuracy against your actual project files.

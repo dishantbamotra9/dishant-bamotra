@@ -9,13 +9,28 @@
 <meta property="og:title" content="Dishant Bamotra — Mechanical Design Engineer & CAD Freelancer">
 <meta property="og:description" content="Mechanical design and CAD solutions for manufacturing — SolidWorks, AutoCAD, sheet metal, weldments and manufacturing-ready drawings.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/images/hero-gear-render.png">
+<meta property="og:image" content="hero-gear-render.png">
 <link rel="canonical" href="index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Animated Mechanical CAD Blueprint Background -->
+<div class="cad-blueprint-bg" aria-hidden="true">
+  <div class="cad-grid cad-grid-a"></div>
+  <div class="cad-grid cad-grid-b"></div>
+  <div class="cad-scanline"></div>
+  <div class="cad-orbit orbit-a"></div>
+  <div class="cad-orbit orbit-b"></div>
+  <div class="cad-gear gear-a">⚙</div>
+  <div class="cad-gear gear-b">⚙</div>
+  <div class="cad-crosshair cross-a"><i></i><b></b></div>
+  <div class="cad-crosshair cross-b"><i></i><b></b></div>
+  <div class="cad-particles"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+
 
 <nav class="site-nav">
   <div class="nav-inner">
@@ -81,10 +96,10 @@
 
     <div class="hero-visual reveal in">
       <div class="draft-card draft-main">
-        <img src="assets/images/projects/sheet-metal-enclosure-hero.png" alt="Sheet metal electrical enclosure isometric CAD render in SolidWorks">
+        <img src="sheet-metal-enclosure-hero.png" alt="Sheet metal electrical enclosure isometric CAD render in SolidWorks">
       </div>
       <div class="draft-card draft-sub">
-        <img src="assets/images/projects/autocad-weldment-drawing.png" alt="AutoCAD weldment manufacturing drawing with dimensions and BOM">
+        <img src="autocad-weldment-drawing.png" alt="AutoCAD weldment manufacturing drawing with dimensions and BOM">
       </div>
       <div class="draft-chip">
         <span class="dot"></span> Concept → CAD → Drawing → Delivery
@@ -146,7 +161,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> 3D model, manufacturing drawing, revision support.</p>
-          <p><strong>Example:</strong> <a href="projects/plummer-block-assembly.html">Plummer Block Assembly</a></p>
+          <p><strong>Example:</strong> <a href="plummer-block-assembly.html">Plummer Block Assembly</a></p>
         </div>
       </div>
 
@@ -158,7 +173,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> SLDPRT / SLDASM, STEP export.</p>
-          <p><strong>Example:</strong> <a href="projects/planetary-gear-assembly.html">Planetary Gear Assembly</a></p>
+          <p><strong>Example:</strong> <a href="planetary-gear-assembly.html">Planetary Gear Assembly</a></p>
         </div>
       </div>
 
@@ -170,7 +185,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> 3D model, flat pattern, DXF, bend table.</p>
-          <p><strong>Example:</strong> <a href="projects/sheet-metal-electrical-enclosure.html">Sheet Metal Electrical Enclosure</a></p>
+          <p><strong>Example:</strong> <a href="sheet-metal-electrical-enclosure.html">Sheet Metal Electrical Enclosure</a></p>
         </div>
       </div>
 
@@ -182,7 +197,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> weldment model, cut-list BOM, fabrication drawing.</p>
-          <p><strong>Example:</strong> <a href="projects/autocad-manufacturing-drawings.html">AutoCAD Weldment Drawing</a></p>
+          <p><strong>Example:</strong> <a href="autocad-manufacturing-drawings.html">AutoCAD Weldment Drawing</a></p>
         </div>
       </div>
 
@@ -194,7 +209,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> dimensioned drawing (PDF / DWG), title block, revision table.</p>
-          <p><strong>Example:</strong> <a href="projects/planetary-gear-assembly.html">Gear Train Drawing Set</a></p>
+          <p><strong>Example:</strong> <a href="planetary-gear-assembly.html">Gear Train Drawing Set</a></p>
         </div>
       </div>
 
@@ -206,7 +221,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> DWG / PDF, layered per standard.</p>
-          <p><strong>Example:</strong> <a href="projects/autocad-manufacturing-drawings.html">AutoCAD Manufacturing Drawings</a></p>
+          <p><strong>Example:</strong> <a href="autocad-manufacturing-drawings.html">AutoCAD Manufacturing Drawings</a></p>
         </div>
       </div>
 
@@ -218,7 +233,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> assembly model, exploded view, assembly drawing.</p>
-          <p><strong>Example:</strong> <a href="projects/bench-vice-assembly.html">Bench Vice Assembly</a></p>
+          <p><strong>Example:</strong> <a href="bench-vice-assembly.html">Bench Vice Assembly</a></p>
         </div>
       </div>
 
@@ -230,7 +245,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> BOM (Excel / PDF) linked to drawing item numbers.</p>
-          <p><strong>Example:</strong> <a href="projects/planetary-gear-assembly.html">Gear Assembly BOM</a></p>
+          <p><strong>Example:</strong> <a href="planetary-gear-assembly.html">Gear Assembly BOM</a></p>
         </div>
       </div>
 
@@ -242,7 +257,7 @@
         <button class="sv-toggle" aria-expanded="false">+ View Details</button>
         <div class="sv-detail">
           <p><strong>Delivers:</strong> DXF flat pattern, bend-line layer.</p>
-          <p><strong>Example:</strong> <a href="projects/sheet-metal-electrical-enclosure.html">Enclosure Flat Pattern</a></p>
+          <p><strong>Example:</strong> <a href="sheet-metal-electrical-enclosure.html">Enclosure Flat Pattern</a></p>
         </div>
       </div>
 
@@ -297,9 +312,9 @@
 
     <div class="projects-grid reveal">
 
-      <a href="projects/sheet-metal-electrical-enclosure.html" class="project-card">
+      <a href="sheet-metal-electrical-enclosure.html" class="project-card">
         <div class="pc-media">
-          <img src="assets/images/projects/sheet-metal-enclosure-hero.png" alt="Sheet metal electrical enclosure isometric render">
+          <img src="sheet-metal-enclosure-hero.png" alt="Sheet metal electrical enclosure isometric render">
           <span class="pc-level">Advanced</span>
         </div>
         <div class="pc-body">
@@ -315,9 +330,9 @@
         </div>
       </a>
 
-      <a href="projects/planetary-gear-assembly.html" class="project-card">
+      <a href="planetary-gear-assembly.html" class="project-card">
         <div class="pc-media">
-          <img src="assets/images/projects/planetary-gear-hero.png" alt="Planetary gear assembly isometric render">
+          <img src="planetary-gear-hero.png" alt="Planetary gear assembly isometric render">
           <span class="pc-level">Advanced</span>
         </div>
         <div class="pc-body">
@@ -333,9 +348,9 @@
         </div>
       </a>
 
-      <a href="projects/autocad-manufacturing-drawings.html" class="project-card">
+      <a href="autocad-manufacturing-drawings.html" class="project-card">
         <div class="pc-media">
-          <img src="assets/images/projects/autocad-weldment-drawing.png" alt="AutoCAD weldment manufacturing drawing">
+          <img src="autocad-weldment-drawing.png" alt="AutoCAD weldment manufacturing drawing">
           <span class="pc-level">Intermediate</span>
         </div>
         <div class="pc-body">
@@ -350,9 +365,9 @@
         </div>
       </a>
 
-      <a href="projects/plummer-block-assembly.html" class="project-card">
+      <a href="plummer-block-assembly.html" class="project-card">
         <div class="pc-media">
-          <img src="assets/images/projects/plummer-block-hero.png" alt="Plummer block bearing housing assembly isometric render">
+          <img src="plummer-block-hero.png" alt="Plummer block bearing housing assembly isometric render">
           <span class="pc-level">Intermediate</span>
         </div>
         <div class="pc-body">
@@ -370,9 +385,9 @@
     </div>
 
     <div class="projects-secondary reveal">
-      <a href="projects/bench-vice-assembly.html" class="project-card secondary">
+      <a href="bench-vice-assembly.html" class="project-card secondary">
         <div class="pc-media">
-          <img src="assets/images/projects/bench-vice-hero.png" alt="Bench vice assembly isometric render">
+          <img src="bench-vice-hero.png" alt="Bench vice assembly isometric render">
         </div>
         <div class="pc-body">
           <span class="pc-cat">Mechanical Assembly · Tooling</span>
@@ -381,9 +396,9 @@
           <span class="pc-link">View Case Study <span class="arrow">→</span></span>
         </div>
       </a>
-      <a href="projects/standalone-mechanical-parts.html" class="project-card secondary">
+      <a href="standalone-mechanical-parts.html" class="project-card secondary">
         <div class="pc-media">
-          <img src="assets/images/projects/part-turned-shaft.png" alt="Standalone machined and fabricated mechanical parts">
+          <img src="part-turned-shaft.png" alt="Standalone machined and fabricated mechanical parts">
         </div>
         <div class="pc-body">
           <span class="pc-cat">Machined &amp; Fabricated Components</span>
@@ -659,7 +674,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
 <style id="visibility-fix">
