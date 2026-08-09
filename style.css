@@ -982,3 +982,620 @@ p{color:var(--ink-soft)}
 @media(max-width:600px){
   body:after{display:none}
 }
+/* =========================================================
+   ANIMATED MECHANICAL CAD BLUEPRINT THEME
+   Visual layer only — portfolio content untouched.
+   ========================================================= */
+
+:root {
+  --paper: #050a12;
+  --paper-dim: #08111d;
+  --ink: #f2f7ff;
+  --ink-soft: #b8c6d8;
+  --muted: #718198;
+  --line: rgba(83, 150, 210, 0.18);
+  --line-strong: rgba(82, 177, 255, 0.42);
+  --blueprint: #159cff;
+  --blueprint-dim: rgba(21, 156, 255, 0.12);
+  --brass: #4db9ff;
+  --brass-dim: rgba(77, 185, 255, 0.08);
+  --white: #0b1420;
+  --ink-invert: #f4f8ff;
+}
+
+/* ---------- main technical environment ---------- */
+
+html,
+body {
+  background: #050a12 !important;
+}
+
+body {
+  color: var(--ink);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated blueprint grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(35, 145, 220, 0.075) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(35, 145, 220, 0.075) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(35, 145, 220, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(35, 145, 220, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    80px 80px,
+    80px 80px,
+    20px 20px,
+    20px 20px;
+
+  animation: cadBlueprintGrid 18s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes cadBlueprintGrid {
+  from {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      80px 80px,
+      80px 80px,
+      20px 20px,
+      20px 20px;
+  }
+}
+
+/* ---------- rotating CAD rings ---------- */
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 720px;
+  height: 720px;
+  right: -220px;
+  top: 80px;
+
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -9;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 0 39%,
+      rgba(20, 156, 255, 0.08) 39.2% 39.4%,
+      transparent 39.6% 49%,
+      rgba(20, 156, 255, 0.12) 49.2% 49.4%,
+      transparent 49.6% 59%,
+      rgba(20, 156, 255, 0.06) 59.2% 59.4%,
+      transparent 59.6%
+    );
+
+  box-shadow:
+    0 0 100px rgba(21, 156, 255, 0.06),
+    inset 0 0 100px rgba(21, 156, 255, 0.03);
+
+  animation: cadOrbit 32s linear infinite;
+}
+
+@keyframes cadOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- sections ---------- */
+
+.section {
+  background: rgba(5, 10, 18, 0.82) !important;
+  border-color: rgba(82, 177, 255, 0.13) !important;
+}
+
+.section.alt {
+  background: rgba(7, 16, 27, 0.86) !important;
+}
+
+.section.dark {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 15, 0.95),
+      rgba(4, 12, 21, 0.94)
+    ) !important;
+}
+
+/* ---------- navigation ---------- */
+
+.site-nav {
+  background: rgba(4, 9, 16, 0.82) !important;
+  border-bottom: 1px solid rgba(65, 160, 230, 0.20) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav-brand strong {
+  color: #f4f8ff;
+}
+
+.nav-brand span {
+  color: #55baff;
+}
+
+.nav-links a {
+  color: #aebed0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a.active::after {
+  background: #159cff;
+  box-shadow: 0 0 12px rgba(21, 156, 255, 0.7);
+}
+
+.nav-toggle span {
+  background: #eaf5ff;
+}
+
+/* ---------- typography ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+  color: #f4f8ff !important;
+}
+
+p {
+  color: #b8c6d8;
+}
+
+.section-head .lede,
+.hero .lede {
+  color: #b8c6d8;
+}
+
+.eyebrow {
+  color: #39adff;
+}
+
+.eyebrow::before {
+  background: #39adff;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 72% 45%,
+      rgba(20, 156, 255, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(20, 100, 180, 0.08),
+      transparent 30%
+    ),
+    rgba(3, 8, 15, 0.72) !important;
+
+  border-bottom: 1px solid rgba(61, 158, 222, 0.15);
+}
+
+.hero h1 {
+  color: #f6f9ff !important;
+  text-shadow: 0 0 30px rgba(21, 156, 255, 0.08);
+}
+
+.hero-tag {
+  color: #9db1c7;
+  border-color: rgba(82, 177, 255, 0.35);
+  background: rgba(9, 23, 38, 0.65);
+}
+
+.hero-stack-item .num {
+  color: #39adff;
+}
+
+.hero-stack-item .lbl {
+  color: #9eb0c4;
+}
+
+/* ---------- CAD visual cards ---------- */
+
+.draft-card {
+  background: rgba(7, 15, 25, 0.72) !important;
+  border-color: rgba(82, 177, 255, 0.28) !important;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.48),
+    0 0 40px rgba(21, 156, 255, 0.07) !important;
+  backdrop-filter: blur(8px);
+}
+
+.draft-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(21, 156, 255, 0.10);
+  pointer-events: none;
+}
+
+.draft-main {
+  animation: cadFloat 7s ease-in-out infinite;
+}
+
+@keyframes cadFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* ---------- title block ---------- */
+
+.title-block {
+  background: rgba(5, 13, 22, 0.86) !important;
+  border-color: rgba(82, 177, 255, 0.42) !important;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.tb-row {
+  border-color: rgba(82, 177, 255, 0.25);
+}
+
+.tb-cell {
+  border-color: rgba(82, 177, 255, 0.25);
+}
+
+.tb-cell .k {
+  color: #66809b;
+}
+
+.tb-cell .v {
+  color: #e5f2ff;
+}
+
+.tb-row.title-row .tb-cell {
+  background: #071522;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  border-color: rgba(65, 170, 245, 0.45);
+}
+
+.btn-primary {
+  background:
+    linear-gradient(
+      135deg,
+      #087ed3,
+      #159cff
+    );
+  border-color: #159cff;
+  color: #ffffff;
+  box-shadow:
+    0 8px 30px rgba(21, 156, 255, 0.20);
+}
+
+.btn-primary:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #159cff,
+      #45b8ff
+    );
+  box-shadow:
+    0 12px 38px rgba(21, 156, 255, 0.35);
+}
+
+.btn-outline {
+  color: #dcecff;
+  background: rgba(5, 15, 25, 0.55);
+  border-color: rgba(82, 177, 255, 0.42);
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+  border-color: #159cff;
+  background: rgba(21, 156, 255, 0.08);
+}
+
+/* ---------- services ---------- */
+
+.services-grid {
+  background: rgba(45, 112, 158, 0.18);
+  border-color: rgba(82, 177, 255, 0.20);
+}
+
+.service-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 27, 43, 0.88),
+      rgba(6, 14, 24, 0.88)
+    ) !important;
+
+  color: #eaf4ff;
+}
+
+.service-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 42, 68, 0.95),
+      rgba(7, 20, 34, 0.95)
+    ) !important;
+
+  box-shadow:
+    inset 0 0 35px rgba(21, 156, 255, 0.05);
+}
+
+.service-card h3 {
+  color: #f1f7ff !important;
+}
+
+.service-card p.sv-desc,
+.service-card .sv-deliver {
+  color: #a9bacd;
+}
+
+.service-card .sv-num {
+  color: #35adff;
+}
+
+/* ---------- project cards ---------- */
+
+.project-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10, 22, 36, 0.95),
+      rgba(5, 13, 22, 0.95)
+    ) !important;
+
+  border-color: rgba(82, 177, 255, 0.20);
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.20);
+}
+
+.project-card:hover {
+  border-color: rgba(21, 156, 255, 0.65);
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.32),
+    0 0 35px rgba(21, 156, 255, 0.08);
+}
+
+.project-card .pc-media {
+  background: #07111c;
+  border-color: rgba(82, 177, 255, 0.18);
+}
+
+.pc-body h3 {
+  color: #f3f8ff !important;
+}
+
+.pc-body p {
+  color: #aebfd1;
+}
+
+.pc-cat {
+  color: #38adff;
+}
+
+.pc-tag {
+  color: #a7bbd0;
+  background: rgba(11, 28, 45, 0.75);
+  border-color: rgba(82, 177, 255, 0.18);
+}
+
+.pc-link {
+  color: #e8f5ff;
+}
+
+.pc-level {
+  background: #071522;
+  color: #8fd3ff;
+  border: 1px solid rgba(82, 177, 255, 0.32);
+}
+
+/* ---------- about / skills ---------- */
+
+.about-point {
+  border-color: rgba(82, 177, 255, 0.16);
+}
+
+.about-point .mark {
+  color: #38adff;
+}
+
+.about-point p {
+  color: #aebfd1;
+}
+
+.skill-tag {
+  background: rgba(9, 21, 35, 0.82);
+  color: #b8c9db;
+  border-color: rgba(82, 177, 255, 0.22);
+}
+
+/* ---------- workflow ---------- */
+
+.wf-step .wf-line {
+  background: rgba(82, 177, 255, 0.25);
+}
+
+.wf-step .wf-num {
+  background: #07111c;
+  border-color: #159cff;
+  color: #39adff;
+}
+
+.wf-step p {
+  color: #8196ac;
+}
+
+.workflow-note {
+  background: rgba(21, 156, 255, 0.06);
+  border-color: rgba(21, 156, 255, 0.35);
+  color: #52baff;
+}
+
+/* ---------- contact ---------- */
+
+.contact-row {
+  border-color: rgba(82, 177, 255, 0.16);
+}
+
+.contact-row .c-k {
+  color: #6f849b;
+}
+
+.contact-row .c-v {
+  color: #dbeaff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(8, 18, 30, 0.90);
+  color: #edf6ff;
+  border-color: rgba(82, 177, 255, 0.22);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #63788e;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #159cff;
+  box-shadow: 0 0 0 3px rgba(21, 156, 255, 0.08);
+}
+
+/* ---------- manufacturing dark section ---------- */
+
+.section.dark p {
+  color: #aebed0;
+}
+
+.mfg-list {
+  border-color: rgba(82, 177, 255, 0.18);
+}
+
+.mfg-item {
+  border-color: rgba(82, 177, 255, 0.18);
+}
+
+.mfg-item .tick {
+  color: #42b4ff;
+}
+
+.mfg-quote {
+  border-color: #159cff;
+  color: #edf6ff;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  background:
+    linear-gradient(
+      180deg,
+      #030811,
+      #02050a
+    ) !important;
+
+  border-top: 1px solid rgba(82, 177, 255, 0.16);
+}
+
+/* ---------- subtle scan line ---------- */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(54, 181, 255, 0.8),
+    transparent
+  );
+
+  animation: cadScan 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes cadScan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(460px);
+    opacity: 0;
+  }
+}
+
+/* ---------- accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .draft-main,
+  .hero::after {
+    animation: none !important;
+  }
+}
