@@ -49,6 +49,9 @@ Hands-on exposure to sheet metal fabrication, laser cutting, press brake forming
 - **Email:** dishantbamotra9@gmail.com
 - **Phone:** +91 72066 25073
 - **LinkedIn:** [linkedin.com/in/dishant-bamotra-592163228](https://linkedin.com/in/dishant-bamotra-592163228)
+- **WhatsApp:** `[ Add WhatsApp number ]`
+- **Freelance profile (Upwork / Fiverr):** `[ Add link ]`
+- **GitHub:** `[ Add link ]`
 
 ---
 
